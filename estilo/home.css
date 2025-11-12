@@ -59,6 +59,7 @@ main {
 #contenido h2 {
     font-family: WhiteDream;
     font-size: 3.5em;
+    margin-bottom: 25px;
 }
 
 .perfil{
@@ -74,6 +75,7 @@ main {
 
 .texto p {
     font-size: 1.2em;
+    padding-right: 100px;
 }
 
 #contenido img {
@@ -184,11 +186,13 @@ main {
     font-family: whiteDream;
     font-size: 3.5em;
     margin-bottom: 0.5em;
+    text-shadow: 4px 4px 2px #000;
 }
 
 .overlay p {
     font-size: 1.2em;
     margin-bottom: 1.5em;
+    text-shadow: 4px 4px 2px #000;
 }
 
 .overlay a {
@@ -258,6 +262,10 @@ main {
     border-radius: 10px;
     margin: 0 10px;
     box-sizing: border-box;
+}
+
+.testimonio h4{
+    margin: 10px;
 }
 
 .prev,

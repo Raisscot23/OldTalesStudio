@@ -1,11 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/headerFooter.css">
+    <link rel="stylesheet" href="estilo/contacto.css">
+    <link rel="shortcut icon" href="recursos/imgs/logo.png">
+
     <title>Contacto</title>
 </head>
+
 <body>
-    
+    <header>
+        <a href="index.html">
+            <img id="logoHeader" src="recursos/imgs/logo_Header.png" alt="">
+        </a>
+
+        <div class="menu-icon" id="menu-toggle">☰</div>
+
+        <nav id="menu">
+            <ul>
+                <div id="redes">
+                    <a href="https://www.facebook.com/profile.php?id=61581100942113"><img
+                            src="recursos/icons/icons (1).png" alt=""></a>
+                    <a
+                        href="https://www.instagram.com/oldtalesstudio?fbclid=IwY2xjawNWL1ZleHRuA2FlbQIxMABicmlkETFDOHZuQzFnYmxFaFdQaUVmAR4vSOEC6oyWV4gOzBt_vOTHbP2195T6m2-HJiy1F11AlJeov60Jik0xFjU86g_aem_dGE9Fw1vercwnC0O0KF0vg">
+                        <img src="recursos/icons/icons (1).webp" alt=""></a>
+                </div>
+
+                <li>
+                    <img src="recursos/icons/aboutUs.png" width="40" alt="">
+                    <a href="quienSomos.html">Quiénes somos</a>
+                </li>
+
+                <li>
+                    <img src="recursos/icons/contact.png" width="40" alt="">
+                    <a href="contacto.html">Contacto</a>
+                </li>
+
+                <li>
+                    <img src="recursos/icons/services.png" width="40" alt="">
+                    <a href="servicios.html">Servicios</a>
+                </li>
+
+                <li>
+                    <img src="recursos/icons/gallery.png" width="40" alt="">
+                    <a href="galeria.html">Galería</a>
+                </li>
+
+                <li>
+                    <img src="recursos/icons/reviews.png" width="40" alt="">
+                    <a href="testimonios.html">Testimonios</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <div id="banners">
+            <img src="recursos/banners/banner.png" alt="Banner">
+        </div>
+
+
+        <div id="contenido">
+            <section id="formulario-contacto">
+
+                <!-- Formulario -->
+                <form id="formSimulacion" onsubmit="simularEnvio(event)">
+                    <h2>Contacto</h2>
+
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="miNombre@gmail.com" required>
+
+                    <label for="servicio">Tipo de servicio</label>
+
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="ilustracion">Ilustración</option>
+                        <option value="programacion">Programación web</option>
+                        <option value="programacion">Programación de videojuegos</option>
+                        <option value="edicion">Edición de vídeo</option>
+                        <option value="edicion">Edición de imágenes</option>
+                    </select>
+
+                    <label for="descripcion">Descripción del proyecto</label>
+                    <textarea id="descripcion" name="descripcion" rows="10"
+                        placeholder="Describe tu proyecto..." required></textarea>
+
+                    <h3>Elige tu método de pago</h3>
+                    <div class="metodos-pago">
+                        <button type="button" class="metodo" data-metodo="tarjeta">Tarjeta</button>
+                        <button type="button" class="metodo" data-metodo="paypal">PayPal</button>
+                    </div>
+
+                    <div class="pago-tarjeta">
+                        <label for="numTarjeta">Número de tarjeta</label>
+                        <input type="text" id="numTarjeta" name="numTarjeta" placeholder="XXXX-XXXX-XXXX-XXXX"> <br><br>
+
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="123">
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+
+                <div id="resultadoSimulacion" class="resultado"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div id="redes">
+            <ul>
+                <li><a href="https://www.facebook.com/profile.php?id=61581100942113"><img
+                            src="recursos/icons/icons (1).png" alt=""></a></li>
+                <li><a
+                        href=https://www.instagram.com/oldtalesstudio?fbclid=IwY2xjawNWL1ZleHRuA2FlbQIxMABicmlkETFDOHZuQzFnYmxFaFdQaUVmAR4vSOEC6oyWV4gOzBt_vOTHbP2195T6m2-HJiy1F11AlJeov60Jik0xFjU86g_aem_dGE9Fw1vercwnC0O0KF0vg"><img
+                            src="recursos/icons/icons (1).webp" alt=""></a></li>
+            </ul>
+        </div>
+        <div id="disclaimer">
+            <h4>© 2025 Old Tales Studio | Todos los derechos reservados.</h4>
+            <h4>Las obras realizadas y presentadas pertenecen a los estudios/marcas para los que fueron diseñados.</h4>
+
+            <h4>Se prohíbe la reproducción, distribución o modificación de los trabajos expuestos en el portafolio</h4>
+        </div>
+        <div id="avisos">
+            <ul>
+                <li>Aviso de Cookies</li>
+                <li>Términos de uso</li>
+                <li>Aviso de privacidad</li>
+                <li>Ayuda</li>
+                <li>Política sobre uso de materiales</li>
+                <li>Declaración de afilación</li>
+                <li>Directrices para transmisiones</li>
+                <li>Update notes</li>
+                <li>Licencias de plugins</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/menuDesplegable.js"></script>
+    <script src="js/formulario.js"></script>
+
 </body>
+
 </html>
