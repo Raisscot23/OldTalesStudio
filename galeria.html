@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/headerFooter.css">
     <link rel="stylesheet" href="estilo/galeria.css">
     <link rel="shortcut icon" href="recursos/imgs/logo.png">
-    
+
     <title>Galería</title>
 </head>
+
 <body>
     <header>
         <a href="index.html">
@@ -62,10 +64,32 @@
 
 
         <div id="contenido">
-            
+
+            <div class="botones">
+                <button type="button" class="seleccion"  data-metodo="ilustracion" style="color: white;">Ilustración digital /
+                    tradicional</button>
+                <button type="button" class="seleccion" data-metodo="ilustracion" style="color: white;">Programador</button>
+                <button type="button" class="seleccion" data-metodo="ilustracion" style="color: white;">Editor</button>
+            </div>
+
+            <div id="galeria1">
+                <h2>Ilustración Digital / Tradicional</h2>
+
+                <div class="trabajos_ilustracion">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                    <img src="recursos/imgs/placeholder.jpg" alt="" srcset="">
+                </div>
+
+            </div>
         </div>
     </main>
-    
+
     <footer>
         <div id="redes">
             <ul>
@@ -98,6 +122,8 @@
     </footer>
 
     <script src="js/menuDesplegable.js"></script>
-    
+    <script src="js/galeriaBTN.js"></script>
+
 </body>
+
 </html>

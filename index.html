@@ -7,18 +7,18 @@
     <link rel="stylesheet" href="estilo/home.css">
     <link rel="stylesheet" href="estilo/headerFooter.css">
     <link rel="shortcut icon" href="recursos/imgs/logo.png">
-    
+
     <title>Old Tales Studio</title>
 </head>
 
-<!-- Google tag (gtag.js) -->
+<!-------------------- Google tag (gtag.js) -------------------->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQ8ESTBPX0"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-GQ8ESTBPX0');
+    gtag('config', 'G-GQ8ESTBPX0');
 </script>
 
 <body>
@@ -183,6 +183,29 @@
 
     <script src="js/menuDesplegable.js"></script>
     <script src="js/testimonios.js"></script>
-</body>
+    <script src="js/popUp.js"></script>
 
+    <div id="popup" class="popup-overlay">
+        <div class="popup-content">
+            <img src="recursos/imgs/logo_Header.png" alt="">
+            <h2>Aviso de privacidad y uso de datos</h2>
+            <p>
+                En Old Tales Studio, respetamos y protegemos la información personal de nuestros
+                clientes conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares.
+                Los datos que recopilamos, como nombre, correo electrónico y datos técnicos de navegación, se utilizan
+                únicamente para ofrecer una mejor experiencia, responder consultas y enviar información relacionada con
+                nuestros servicios. Implementamos medidas de seguridad para proteger la información contra accesos no
+                autorizados. <br><br>
+                Este sitio utiliza cookies para mejorar la navegación, analizar el tráfico y personalizar el contenido.
+                Puedes desactivarlas en la configuración de tu navegador, aunque algunas funciones podrían verse
+                afectadas. <br><br>
+                Al continuar navegando en este sitio, aceptas el uso de tus datos conforme a este aviso y el uso de
+                cookies descrito. Para ejercer tus derechos de acceso, rectificación, cancelación u oposición (ARCO), o
+                para más información, puedes contactarnos en oldtalesstudio@gmail.com
+            </p>
+            <button id="cerrarPopup">Cerrar</button>
+        </div>
+    </div>
+
+</body>
 </html>

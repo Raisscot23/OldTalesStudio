@@ -47,3 +47,80 @@ main {
 }
 
 /*----------------------------------------*/
+/*--Botones--*/
+
+.botones{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.botones button {
+    background-color: #010058;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 500px;
+    height: auto;
+
+    font-size: 2em;
+    font-family: whiteDream;
+}
+
+.botones button:hover {
+    background-color: #6563f5;
+}
+
+/*----------------------------------------*/
+#galeria1 {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#galeria1 h2 {
+    color: black;
+    padding-bottom: 20px;
+    font-size: 3.5em;
+    font-family: whiteDream;
+}
+
+/* --- GRID DE IMÁGENES --- */
+.trabajos_ilustracion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+}
+
+.trabajos_ilustracion img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trabajos_ilustracion img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+    #galeria1 h2 {
+        font-size: 1.6rem;
+    }
+
+    .trabajos_ilustracion img {
+        height: 150px;
+    }
+}
