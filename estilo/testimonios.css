@@ -5,6 +5,7 @@
 }
 
 /*----------------------------------------*/
+/* TIPOGRAFÍAS */
 @font-face {
     font-family: WhiteDream;
     src: url(/recursos/tipografias/WhiteDreamPERSONALUSEONLY-Regular.otf);
@@ -13,6 +14,15 @@
 @font-face {
     font-family: romantic;
     src: url(/recursos/tipografias/ROMANTIC.TTF);
+}
+
+/*----------------------------------------*/
+/* PALETA DE COLORES AZULES */
+:root {
+    --azul: #0099ff;
+    --azul-hover: #33b7ff;
+    --gris-suave: #eee;
+    --gris-texto: #222;
 }
 
 /*----------------------------------------*/
@@ -25,8 +35,8 @@
 /*----------------------------------------*/
 
 body {
-    color: #222;
-    background-color: black;
+    color: var(--gris-texto);
+    background-color: #ffffff;
 }
 
 main {
@@ -34,6 +44,7 @@ main {
 }
 
 /*----------------------------------------*/
+/* BANNERS */
 
 #banners {
     position: relative;
@@ -47,20 +58,22 @@ main {
 }
 
 /*----------------------------------------*/
+/* TESTIMONIOS */
 
 #testimonios {
     text-align: center;
     padding: 60px 20px;
-    color: white;
+    color: var(--gris-texto);
 }
 
 #testimonios h2 {
-    color: white;
+    color: #000;
     padding-bottom: 20px;
     font-size: 3.5em;
-    font-family: whiteDream;
+    font-family: WhiteDream;
 }
 
+/* Contenedor general */
 .testimonios-wrapper {
     display: flex;
     align-items: center;
@@ -68,53 +81,67 @@ main {
     gap: 10px;
 }
 
+/* Ventana */
 .carrusel-viewport {
     width: 100%;
     overflow: hidden;
 }
 
+/* Contenedor deslizante */
 .testimonios-container {
     display: flex;
     transition: transform 0.5s ease;
+    padding: 20px;
 }
 
+/* Tarjeta de testimonio */
 .testimonio {
     flex: 0 0 calc(33.33% - 20px);
-    background: #eee;
+    background: var(--gris-suave);
     color: #000;
     padding: 20px;
     border-radius: 10px;
     margin: 0 10px;
     box-sizing: border-box;
+
+    /* Sombras azules */
+    border: 2px solid var(--azul);
+    box-shadow: 0 4px 10px rgba(0, 153, 255, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonio h4{
+.testimonio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 153, 255, 0.45);
+}
+
+.testimonio h4 {
     margin: 10px;
+    color: var(--azul);
 }
 
+/* Flechas */
 .prev,
 .next {
     font-size: 5rem;
     background: none;
     border: none;
     cursor: pointer;
-    color: white;
+    color: var(--azul);
     z-index: 2;
     transition: 0.3s;
+    padding: 0 10px;
+    border-radius: 10px;
 }
 
-.prev:hover{
-    color: blue;
-    background-color: white;
-}
-
-.next:hover{
-    color: blue;
-    background-color: white;
+.prev:hover,
+.next:hover {
+    color: #ffffff;
+    background-color: var(--azul-hover);
 }
 
 /*----------------------------------------*/
-/* --- SECCIÓN DE LOGOS / ÁLBUM --- */
+/* SECCIÓN DE LOGOS */
 
 #logos {
     max-width: 1100px;
@@ -125,13 +152,13 @@ main {
 }
 
 #logos h2 {
-    color: white;
+    color: #000;
     padding-bottom: 20px;
     font-size: 3.5em;
-    font-family: whiteDream;
+    font-family: WhiteDream;
 }
 
-/* --- GRID DE IMÁGENES --- */
+/* GRID */
 .logos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -142,22 +169,33 @@ main {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border: 2px solid #000;
+    border: 3px solid var(--azul);
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .logos img:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 153, 255, 0.5);
 }
 
+/*----------------------------------------*/
+/* RESPONSIVE */
 @media (max-width: 768px) {
+
     #logos h2 {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     .logos img {
         height: 150px;
+    }
+
+    .testimonio {
+        flex: 0 0 100%;
+    }
+
+    #testimonios h2 {
+        font-size: 2.5rem;
     }
 }

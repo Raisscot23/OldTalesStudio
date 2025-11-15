@@ -80,6 +80,9 @@ main {
 }
 
 .texto-servicio {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    
     text-align: left;
 }
 

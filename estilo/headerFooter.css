@@ -17,6 +17,9 @@ header {
     background-color: none;
     border-radius: 5%;
     transition: background 0.3s;
+
+    width: auto;
+    height: 100%;
 }
 
 #logoHeader:hover{

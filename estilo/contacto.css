@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,7 +20,7 @@
 #logoHeader {
     width: auto;
     height: 100%;
-} 
+}
 
 /*----------------------------------------*/
 
@@ -48,81 +48,123 @@ main {
 
 /*----------------------------------------*/
 
+#formSimulacion h2 {
+    font-family: WhiteDream;
+    text-align: center;
+    justify-content: center;
+    font-size: 3.2em;
+}
+
 #formulario-contacto {
-    max-width: 600px;
+    max-width: 650px;
     margin: 60px auto;
     padding: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
-.banner-promocion img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    background-color: #f8f8f8;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    gap: 18px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+
+    border: 3px solid #010058;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
 }
 
 label {
-    font-weight: 600;
-    text-align: left;
+    font-weight: 700;
+    color: #010058;
 }
 
-input, select, textarea {
-    padding: 10px;
-    border: 1px solid #bbb;
-    border-radius: 8px;
+input,
+select,
+textarea {
+    padding: 12px;
+    border: 2px solid #6563f5;
+    border-radius: 10px;
     font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #010058;
+    box-shadow: 0 0 8px rgba(1, 0, 88, 0.4);
 }
 
 .metodos-pago {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 10px 0;
 }
 
 .metodo {
-    padding: 10px 20px;
-    border: 2px solid #000;
+    padding: 10px 25px;
+    border: 3px solid #010058;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-weight: 600;
     transition: 0.3s;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.metodo:hover {
+    background-color: #6563f5;
+    color: white;
 }
 
 .metodo.activo {
-    background-color: #000;
+    background-color: #010058;
     color: #fff;
 }
 
 .btn-enviar {
-    background-color: #000;
-    color: #fff;
+    background-color: #010058;
+    color: white;
     border: none;
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 8px;
+    padding: 14px;
+    font-size: 1.1rem;
+    border-radius: 10px;
     cursor: pointer;
+    font-weight: 600;
     transition: 0.3s;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .btn-enviar:hover {
-    background-color: #333;
+    background-color: #6563f5;
+    transform: translateY(-3px);
 }
 
+/* ===== MENSAJE FINAL ===== */
 .resultado {
     margin-top: 20px;
     text-align: center;
-    font-weight: 600;
-    color: green;
+    font-weight: 700;
+    color: #010058;
+    font-size: 1.2em;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .metodos-pago {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .metodo {
+        text-align: center;
+        padding: 12px;
+    }
+
+    form {
+        padding: 20px;
+    }
 }
