@@ -86,6 +86,10 @@ main {
     text-align: left;
 }
 
+.imagen-servicio {
+    width: 100%;
+}
+
 /* --- TIPOS DE SERVICIOS --- */
 .subtitulo {
     margin: 30px;
